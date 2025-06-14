@@ -19,7 +19,7 @@ This project uses the powerful face_recognition library, backed by deep metric l
 
 
 ## 📁 Project Structure
-
+```bash
 AI Face Tracker/
 ├── dataset/           # Known face images (jpg/png)
 ├── outputs/           # Annotated frames + output video
@@ -29,19 +29,16 @@ AI Face Tracker/
 │   ├── identify.py    # Detects and tags faces in video
 │   └── viewer.py      # Shows saved frames one by one
 ├── Frames/            # Save the vedio into frames
-
+```
 
 ## ⚙️ Requirements
-  
-  *Python 3.8+
-  
-  *OpenCV (cv2)
-  
-  *face_recognition
-  
-  *dlib
-  
-  *NumPy
+
+- 🐍 Python 3.8+  
+- 🎥 OpenCV (`cv2`)  
+- 🧠 face_recognition  
+- 🛠️ dlib  
+- ➗ NumPy
+
 
 ## 📦 Installation Guide
 
@@ -65,21 +62,18 @@ cd AiFaceTracking
 ### 2. Add Known Faces
 Place labeled images (e.g., john.jpg, alice.png) inside the dataset/ folder. The filename (excluding extension) will be used as the label.
 
-3. Run Face Identification
+### 3. Run Face Identification
 Ensure you have a test video file like test.mp4 in the root directory.
 ```bash
 python identify.py
 ```
 This will:
-  Load and encode known faces from dataset/
+ - Load and encode known faces from dataset/
+ - Process test.mp4
+ - Annotate all recognized faces
+ - Save each frame and an output video to outputs/
 
-  Process test.mp4
-
-  Annotate all recognized faces
-
-  Save each frame and an output video to outputs/
-
-4. View Saved Frames
+### 4. View Saved Frames
 ```bash
 python viewer.py
 ```
@@ -87,15 +81,15 @@ Use this script to visually verify face detection results. Press q to exit playb
 
 ## 🧠 How It Works
 
-Each image in the dataset/ is encoded into a 128-dimensional vector using face_recognition.
+- Each image in the dataset/ is encoded into a 128-dimensional vector using face_recognition.
 
-The input video is read frame-by-frame.
+- The input video is read frame-by-frame.
 
-Each detected face in a frame is encoded and compared with known encodings.
+- Each detected face in a frame is encoded and compared with known encodings.
 
-If a match is found (based on face distance), it labels the face with the corresponding name.
+- If a match is found (based on face distance), it labels the face with the corresponding name.
 
-Results are saved as both images and video for inspection.
+- Results are saved as both images and video for inspection.
 
 ## 💡 Use Cases
 
@@ -108,33 +102,18 @@ Results are saved as both images and video for inspection.
 📊 Analytics	Use annotated data for people-counting and presence analysis.
 
 ## 💥 Troubleshooting
-No module named face_recognition
+### No module named face_recognition
 
 → Make sure face_recognition is installed correctly and compatible with your Python version.
 
-No faces found in image
+### No faces found in image
 
 → Ensure the image has a clear front-facing face with proper lighting.
 
-dlib installation error
+### dlib installation error
 
 → Try installing CMake and Visual Studio Build Tools (Windows) or Xcode (macOS).
 
-## 👨‍💻 Contribution Guidelines
-
-We welcome contributors! Feel free to fork this repository, make improvements, and submit a pull request.
-
-Possible Contributions
-
-Add live camera support
-
-Improve detection accuracy
-
-Optimize video output
-
-Create a web interface using Flask or Streamlit
-
-Add face logging or timestamp recording
 
 ## 📜 License
 This project is open source under the MIT License.
