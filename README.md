@@ -5,17 +5,13 @@ AI Face Tracking is an intelligent face recognition and tracking system that det
 This project uses the powerful face_recognition library, backed by deep metric learning on top of dlib, to identify faces from a dataset of known individuals. Once trained, the system can label each face found in a video stream and save both individual frames and an annotated video for visualization.Whether you're trying to build a smart classroom, monitor office attendance, or develop a face-based surveillance system, this modular tool provides the base for extending and deploying facial recognition in real-world environments.
 
 ## 📌 Features
-🎥 Real-time face detection and recognition from video
 
-🧠 Uses facial encodings to match against known faces
-
-🏷 Annotates video frames with identified names
-
-💾 Saves all processed frames and creates an annotated video
-
-🖼 Viewer to review saved frames interactively
-
-⚙️ Modular design with separate scripts for loading, identification, and viewing
+  🎥 Real-time face detection and recognition from video
+  🧠 Uses facial encodings to match against known faces
+  🏷 Annotates video frames with identified names
+  💾 Saves all processed frames and creates an annotated video
+  🖼 Viewer to review saved frames interactively
+  ⚙️ Modular design with separate scripts for loading, identification, and viewing
 
 ## 📁 Project Structure
 
@@ -31,17 +27,14 @@ AI Face Tracker/
 
 
 ## ⚙️ Requirements
+  
   Python 3.8+
-
   OpenCV (cv2)
-
   face_recognition
-
   dlib
-
   NumPy
 
-##📦 Installation Guide
+## 📦 Installation Guide
 
 1. Install Dependencies
 
